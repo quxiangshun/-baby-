@@ -1,0 +1,5 @@
+@use "variables";
+
+body {
+    font-size: variables.$font_size;
+}
