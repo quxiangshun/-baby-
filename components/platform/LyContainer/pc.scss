@@ -1,5 +1,7 @@
 @use "./index.scss";
 
 .ly-container {
-    padding: 0 300px;
+    padding: 0 50px;
+    position: relative;
+    z-index: 1;
 }

@@ -48,6 +48,8 @@ export default defineNuxtConfig({
   },
   postcss: {
     plugins: {
+      '@tailwindcss/postcss7-compat': {},
+      autoprefixer: {},
       "postcss-px-to-viewport-8-plugin": {
         viewportWidth: 375, // 视窗的宽度，对应的是我们设计稿的宽度
         viewportHeight: 912, // 视窗的高度，对应的是我们设计稿的高度
