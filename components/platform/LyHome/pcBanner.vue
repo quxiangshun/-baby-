@@ -13,12 +13,13 @@
       </el-dropdown>
     </el-col>
     <el-col :span="2">
-      <el-dropdown split-button type="primary" @click="handleClick">
+      <el-dropdown split-button type="primary" @click="handleClick('/format')">
         格式化
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item>Action 1</el-dropdown-item>
-            <el-dropdown-item>Action 2</el-dropdown-item>
+            <el-dropdown-item>JS压缩、格式化</el-dropdown-item>
+            <el-dropdown-item>JS混淆加密</el-dropdown-item>
+            <el-dropdown-item>CSS压缩、格式化</el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>

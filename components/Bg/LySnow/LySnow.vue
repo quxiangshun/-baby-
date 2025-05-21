@@ -158,6 +158,9 @@
     bottom: 0;
     width: 100%;
     overflow: hidden;
+    background-image: url("./snow-bg.jpg");
+    background-size: cover;
+    background-position: center;
   }
   
   .canvas-element {
