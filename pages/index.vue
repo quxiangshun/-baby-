@@ -1,8 +1,5 @@
 <template>
-    <HomeBanner />
-    <!-- <van-button type="primary" @click="showToast('toast')">button</van-button> -->
-    <!-- <el-button type="primary">button</el-button> -->
-    <!-- <Button @click="enableCustomLayout">button</Button> -->
+    <MusicalText />
 </template>
 
 <script lang="ts" setup>

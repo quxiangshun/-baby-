@@ -37,7 +37,6 @@ export default defineNuxtConfig({
   modules: [  //配置Nuxt3的扩展的库
     "@pinia/nuxt",
     '@pinia-plugin-persistedstate/nuxt',
-    "@vant/nuxt",
     "@element-plus/nuxt"
   ],
   piniaPersistedstate: {
@@ -63,7 +62,6 @@ export default defineNuxtConfig({
       }
     }
   },
-  vant: { /** Options */ },
   elementPlus: { /** Options */ },
   components: [{
     path: '~/components/',
