@@ -87,5 +87,6 @@ watchEffect(() => {
 <style scoped>
 footer {
   margin-top: 4rem;
+  z-index: 2;
 }
 </style>

@@ -19,8 +19,8 @@
 </template>
   
   <script setup>
-  import { ref, computed } from 'vue'
-  import { useRouter } from 'vue-router' // 引入路由钩子
+  import { ref, computed } from 'vue';
+  import { useRouter } from 'vue-router'; // 引入路由钩子
   import { useHead } from "#app";
 
   const route = useRoute() // 获取当前路由对象
