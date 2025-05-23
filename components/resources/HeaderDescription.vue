@@ -3,7 +3,6 @@
     <el-row :gutter="10">
       <el-col>
         <el-card class="line-card">
-          <el-text type="primary"><h1>老baby·二爷</h1></el-text>
           <h2>点击软件名称下载，亲测可用</h2>
           <div class="font-medium">
             请使用 Ctrl+F 组合键来搜索您需要的软件。

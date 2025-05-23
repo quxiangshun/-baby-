@@ -10,8 +10,8 @@
       </div>
       <!-- 补充不足一行的数据 -->
       <div
-          v-for="i in 5 - row.length"
-          v-if="rowIndex === processedData.length - 1 && row.length < 5"
+          v-for="i in 4 - row.length"
+          v-if="rowIndex === processedData.length - 1 && row.length < 4"
           :key="'empty-' + i"
           class="table-cell"
       />
@@ -30,8 +30,8 @@ const props = defineProps<RecordProps>();
 const processedData = computed(() => {
   const result = [];
   if (props.data) {
-    for (let i = 0; i < props.data.length; i += 5) {
-      result.push(props.data.slice(i, i + 5));
+    for (let i = 0; i < props.data.length; i += 4) {
+      result.push(props.data.slice(i, i + 4));
     }
   }
   return result;
@@ -54,8 +54,8 @@ const processedData = computed(() => {
 
 .table-cell {
   border-right: solid 1px;
-  padding: 10px;
-  flex-basis: 20%;
+  padding: 2px;
+  flex-basis: 25%;
   flex-grow: 0;
 }
 

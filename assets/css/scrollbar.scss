@@ -1,0 +1,45 @@
+/**
+ * custom-scrollbar: 半透明滚动条
+ * glass-scrollbar: 磨砂玻璃效果滚动条
+ */
+
+/* 半透明滚动条 */
+/* assets/css/scrollbar.css */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.5); /* 半透明背景 */
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.7); /* 半透明滑块 */
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.8);
+}
+
+/* 磨砂玻璃效果滚动条 */
+.glass-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.glass-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.glass-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
