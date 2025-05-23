@@ -1,23 +1,6 @@
 <template>
   <div class="ly-header">
-    <el-menu
-      :default-active="activeIndex"
-      class="el-menu-demo"
-      mode="horizontal"
-      :ellipsis="false"
-      @select="handleSelect"
-    >
-      <el-menu-item index="0">
-        <img src="/assets/image/logo.png" style="width: 70px" alt="Logo" />
-      </el-menu-item>
-      <el-menu-item index="1">首页</el-menu-item>
-      <el-sub-menu index="2">
-        <template #title>工具</template>
-        <el-menu-item index="21">JSON</el-menu-item>
-        <el-menu-item index="22">格式化</el-menu-item>
-      </el-sub-menu>
-      <el-menu-item index="3">资源</el-menu-item>
-    </el-menu>
+    <LyNavMenu />
   </div>
 </template>
 

@@ -37,7 +37,8 @@ export default defineNuxtConfig({
   modules: [  //配置Nuxt3的扩展的库
     "@pinia/nuxt",
     '@pinia-plugin-persistedstate/nuxt',
-    "@element-plus/nuxt"
+    "@element-plus/nuxt",
+    'json-editor-vue/nuxt'
   ],
   piniaPersistedstate: {
     cookieOptions: {

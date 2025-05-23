@@ -1,13 +1,16 @@
-<template>
-  demo父级页面
-</template>
-<script setup lang="ts">
-useSeoMeta({
-  title: "My Amazing Site",
-  ogTitle: "My Amazing Site",
-  description: "提供相关的json解析、验证、格式化、压缩、编辑器以及json与XML相互转换等服务。",
-  ogDescription: "This is my amazing site, let me tell you all about it.",
-  ogImage: "https://example.com/image.png",
-  twitterCard: "summary_large_image",
-});
+<script setup>
+import JsonEditorVue from 'json-editor-vue'
+
+const attrs = useAttrs()
+const value = ref({})
 </script>
+
+<template>
+  <JsonEditorVue
+      v-model="value"
+      v-bind="attrs"
+      :options="{
+        language: 'zh', // 设置语言为中文
+      }"
+  />
+</template>

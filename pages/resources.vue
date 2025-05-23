@@ -15,7 +15,7 @@ const isResourceRootPage = computed(() => {
 
 <template>
   <div v-if="isResourceRootPage" class="select-none">
-    <el-card class="card-custom glass-scrollbar" style="height: calc(100vh - 60px);">
+    <el-card class="card-bg-custom glass-scrollbar" style="height: calc(100vh - 60px);">
       <HeaderDescription />
       <h2 class="area-title mt-5 mb-5">Windows Adobe系列</h2>
       <ResourceList :data="winAdobe23ResourceList" />
@@ -29,10 +29,6 @@ const isResourceRootPage = computed(() => {
 </template>
 
 <style lang="scss" scoped>
-.card-custom {
-  overflow-y: auto;
-  background-color: RGB(255, 255, 255, 0.3);
-}
 .area-title {
   background: linear-gradient(
           to right,

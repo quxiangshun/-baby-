@@ -1,5 +1,5 @@
 <template>
-  <LyHome />
+  <ToolSubMenu />
   <el-row v-if="isJsonRootPage" :gutter="16">
     <el-col
         v-for="(tool, index) in toolList"
