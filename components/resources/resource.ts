@@ -1,3 +1,13 @@
+const jetBrainsResourceList = [
+  {
+    name: "Intellij Idea",
+    type: "idea",
+    href: "https://pan.baidu.com/s/1gQ7-ausVLfBCKT3R7AsdoQ?pwd=edsq",
+    link1: "https://www.panmishu.cn/index/t/index.html?sn=62025050809371448",
+    link2: "https://www.w7r.cn/details/1638BA75"
+  }
+];
+
 const pmResourceList = [
   {
     name: "AxureRP-Pro 7.0",
@@ -47,7 +57,7 @@ const winAdobe23ResourceList = [
   {
     name: "Lightroom_Classic2023",
     type: "lrc23",
-    href: "https://pan.baidu.com/s/1gQ7-ausVLfBCKT3R7AsdoQ?pwd=edsq",
+    href: "https://pan.baidu.com/s/1X9yrOZt0rvOSAOOK0y8uuw?pwd=macn",
     link1: "https://www.panmishu.cn/index/t/index.html?sn=62025050809371448",
     link2: "https://www.w7r.cn/details/1638BA75"
   },
@@ -74,5 +84,5 @@ const winAdobe23ResourceList = [
   }
 ];
 
-const combinedList = [].concat(winAdobe23ResourceList, pmResourceList);
-export { winAdobe23ResourceList, pmResourceList, combinedList };
+const combinedList = [].concat(jetBrainsResourceList, winAdobe23ResourceList, pmResourceList);
+export { jetBrainsResourceList, winAdobe23ResourceList, pmResourceList, combinedList };

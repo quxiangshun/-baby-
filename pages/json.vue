@@ -10,7 +10,7 @@
         :lg="6"
         :xl="4"
     >
-      <el-card class="mb-5 cursor-pointer card-bg-custom" @click="navigateToTool(tool.url)">
+      <el-card class="mb-5 cursor-pointer card-bg-custom p-2" style="padding: 0 !important" @click="navigateToTool(tool.url)">
         <div>{{ tool.name }}</div>
       </el-card>
     </el-col>

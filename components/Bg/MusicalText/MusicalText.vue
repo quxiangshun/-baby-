@@ -1,6 +1,6 @@
 <template>
-  <div class="musical-text-container">
-    <div class="text-9xl rounded-xl p-4 md:p-6 overflow-hidden">
+  <div class="musical-text-container flex justify-center">
+    <div class="text-8xl rounded-xl overflow-hidden">
       <div class="flex justify-center">
         <div ref="textContainer" class="text-[clamp(1.5rem,5vw,3rem)] font-bold text-center leading-tight">
           <!-- 字符将通过 JS 动态生成 -->
@@ -87,9 +87,8 @@ const createCharAnimations = () => {
     charElement.style.animationDuration = `${props.baseSpeed / animationSpeed.value}s`
     charElement.style.animationDelay = `${index * currentWaveIntensity.value}s`
     charElement.style.animationTimingFunction = props.animationEasing
-    charElement.style.display = 'inline-block'
-
-    textContainer.value.appendChild(charElement)
+    charElement.style.display = "inline-block";
+    textContainer.value?.appendChild(charElement)
   })
 }
 
@@ -125,12 +124,11 @@ watch(showText, (newValue) => {
 .musical-text-container {
   width: 100%;
   max-width: 600px;
-  min-height: 200px; /* 增加最小高度防止布局塌陷 */
+  min-height: 100px; /* 增加最小高度防止布局塌陷 */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
 }
 
 .note-bounce {
@@ -142,11 +140,11 @@ watch(showText, (newValue) => {
 @keyframes noteBounce {
   0%, 100% {
     transform: translateY(0);
-    color: var(--color-start);
+    color: var(--el-text-color-accent);
   }
   50% {
-    transform: translateY(var(--jump-height, -8px));
-    color: var(--color-peak);
+    transform: translateY(-8px);
+    color: var(--el-text-color-link);
     /* 增加视觉反馈 */
     text-shadow: 0 0 8px rgba(255, 105, 180, 0.3);
   }

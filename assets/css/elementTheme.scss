@@ -6,4 +6,16 @@
   --el-color-primary-light-8: #ffd1e5 !important;
   --el-color-primary-light-9: #ffe9f2 !important;
   --el-color-primary-dark-2: #ff47a3 !important;
+
+  /* 动漫风格蓝色系文本颜色 */
+  --el-text-color-primary: #9932cc !important;    /* 群青色 - 主文本 */
+  --el-text-color-regular: #2589bd !important;    /* 瑠璃色 - 常规文本 */
+  --el-text-color-secondary: #73a6ff !important;  /* 露草色 - 次要文本 */
+
+  /* 动漫风格紫色系文本颜色 */
+  --el-text-color-accent: #1a5fb4 !important;     /* 深紫色 - 强调文本 */
+  --el-text-color-link: #7b68ee !important;       /* 紫罗兰色 - 链接文本 */
+
+  /* 白色文本用于深色背景 */
+  --el-text-color-white: #ffffff !important;      /* 纯白色 - 用于深色背景 */
 }
