@@ -11,7 +11,7 @@ const showPopup = () => {
   <div>
     <div class="ly-header">
       <img src="/assets/image/logo.png" style="width: 70px; cursor: pointer" />
-      <el-icon class="text-2xl" @click="showPopup"><icon-menu /></el-icon>
+      <el-icon :size="25" @click="showPopup"><icon-menu /></el-icon>
     </div>
     <el-drawer v-model="show" :with-header="false" size="60%">
       <LyNavMenu />
