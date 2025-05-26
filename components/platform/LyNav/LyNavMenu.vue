@@ -16,6 +16,7 @@
         <el-menu-item index="22">格式化</el-menu-item>
       </el-sub-menu>
       <el-menu-item index="3">资源</el-menu-item>
+      <el-menu-item index="4">休闲游戏</el-menu-item>
     </el-menu>
 </template>
 
@@ -36,7 +37,8 @@ watchEffect(() => {
     '/': '1',
     '/json': '21',
     '/format': '22',
-    '/resources': '3'
+    '/resources': '3',
+    '/games': '4'
   }
   activeIndex.value = routeMap[route.path] || '1'
 })
@@ -49,7 +51,8 @@ const handleSelect = (key: string) => {
     '21': '/json',
     '22': '/tools/encryption',
     '23': '/tools/three',
-    '3': '/resources'
+    '3': '/resources',
+    '4': '/games',
   }
 
   if (routesMap[key]) {
