@@ -7,7 +7,7 @@
       :lg="6"
       :xl="4"
     >
-      <el-dropdown split-button type="primary" @click="handleClick('/json')">
+      <el-dropdown split-button type="primary" @click="handleClick('/json')" trigger="click">
         JSON工具
         <template #dropdown>
           <el-dropdown-menu>
@@ -25,7 +25,7 @@
       :lg="6"
       :xl="4"
     >
-      <el-dropdown split-button type="primary" @click="handleClick('/format')">
+      <el-dropdown split-button type="primary" @click="handleClick('/format')" trigger="click">
         格式化
         <template #dropdown>
           <el-dropdown-menu>

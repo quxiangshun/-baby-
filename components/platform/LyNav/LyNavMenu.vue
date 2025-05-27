@@ -16,7 +16,8 @@
         <el-menu-item index="22">格式化</el-menu-item>
       </el-sub-menu>
       <el-menu-item index="3">资源</el-menu-item>
-      <el-menu-item index="4">休闲游戏</el-menu-item>
+      <el-menu-item v-if="mobileStore.isMobile" index="4">休闲游戏</el-menu-item>
+      <el-menu-item index="5">咸鱼之王</el-menu-item>
     </el-menu>
 </template>
 
@@ -38,7 +39,8 @@ watchEffect(() => {
     '/json': '21',
     '/format': '22',
     '/resources': '3',
-    '/games': '4'
+    '/games': '4',
+    '/xyzw': '4'
   }
   activeIndex.value = routeMap[route.path] || '1'
 })
@@ -53,6 +55,7 @@ const handleSelect = (key: string) => {
     '23': '/tools/three',
     '3': '/resources',
     '4': '/games',
+    '5': '/xyzw',
   }
 
   if (routesMap[key]) {
