@@ -1,52 +1,24 @@
 <template>
-  <el-row v-if="isXyzwRootPage" :gutter="16">
-    <el-col
-        v-for="(tool, index) in toolList"
-        :key="index"
-        :xs="24"
-        :sm="12"
-        :md="8"
-        :lg="6"
-        :xl="4"
-    >
-      <el-card class="mb-5 cursor-pointer card-bg-custom p-2" style="padding: 0 !important" @click="navigateToTool(tool.url)">
-        <div>{{ tool.name }}</div>
-      </el-card>
-    </el-col>
-  </el-row>
-  <NuxtPage/>
+  <div>
+    <!--  积分和宝箱兑换说明  -->
+    <Points2TreasureChest />
+    <!-- 计算轮次 -->
+    <CalculationRounds />
+    <!-- 目标轮次规划 -->
+    <TargetRounds />
+    <!-- 页脚 -->
+    <footer class="text-center text-gray-500 text-sm">
+      <p>咸鱼之王宝箱计算器 | 数据仅供参考</p>
+    </footer>
+  </div>
 </template>
-
-<script setup>
-import { ref, computed } from 'vue';
-import { useRouter } from 'vue-router'; // 引入路由钩子
+<script setup lang="ts">
 import { useHead } from "#app";
-
-const route = useRoute() // 获取当前路由对象
-const router = useRouter() // 获取路由实例
-
-// 计算属性：判断是否为主页（路径为 '/'）
-const isXyzwRootPage = computed(() => {
-  return route.path === '/xyzw'
-})
-
-// 定义页面数据
-const toolList = ref([
-  { name: "宝箱计算", icon: "", url: "/xyzw/treasure-box" },
-  { name: "金鱼计算", icon: "", url: "/xyzw/golden-fish" },
-])
-
-// 导航函数
-const navigateToTool = url => {
-  if (url) {
-    router.push(url) // 使用路由方法跳转
-  }
-}
 
 // 使用useHead配置头部
 useHead({
   // 基础元信息
-  title: "咸鱼之王 | 栾媛",
+  title: "咸鱼之王宝箱计算器 | 栾媛",
   htmlAttrs: {
     lang: "zh-CN", // 设置语言属性（必填）
     dir: "ltr", // 文字方向（默认左到右）
@@ -62,13 +34,13 @@ useHead({
     {
       hid: "keywords",
       name: "keywords",
-      content: "咸鱼之王,咸鱼之王宝箱计算器,咸鱼之王金鱼计算器,咸鱼宝箱计算,咸鱼金鱼计算,咸鱼资讯",
+      content: "咸鱼之王宝箱计算器,咸鱼之王宝箱计算,咸鱼之王计算器,咸鱼宝箱计算,咸鱼宝箱计算器,JSON与XML转换",
     },
     // 描述优化（突出服务价值，控制在160字符内）
     {
       hid: "description",
       name: "description",
-      content: "老baby·二爷-咸鱼之王提供提供宝箱、金鱼等计算，以及咸鱼之王相关资讯",
+      content: "咸鱼之王宝箱计算器根据实际数量计算宝箱活动轮数，宝箱周可以做几轮宝箱",
     },
     // 其他SEO标签（可选）
     { name: "author", content: "屈想顺" },
@@ -106,10 +78,3 @@ useHead({
   ],
 });
 </script>
-
-<style scoped>
-/* 添加鼠标指针样式 */
-.cursor-pointer {
-  cursor: pointer;
-}
-</style>
