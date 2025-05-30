@@ -182,6 +182,8 @@ const boxPointsDetail = computed(() => ({
 
 <template>
   <div class="container mx-auto p-4">
+    <GoldfishActivityProps />
+    <!-- 资源输入区 -->
     <!-- 资源输入区 -->
     <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
       <div class="bg-white rounded-lg shadow p-4">
