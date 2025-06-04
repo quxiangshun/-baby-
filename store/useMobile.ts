@@ -5,9 +5,10 @@ interface IsMobileInterface {
 }
 
 const useMobile = defineStore("mobile", {
-    state: ():IsMobileInterface => {
+    state: ():{ isMobile: boolean; showDrawer: boolean } => {
         return {
             isMobile: false,
+            showDrawer: false
         };
     }
 });

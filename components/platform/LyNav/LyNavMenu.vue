@@ -1,6 +1,6 @@
 <template>
     <el-menu
-        :mode="mobileStore.isMobile ? 'vertical' : 'horizontal'"
+        :mode="isMobile ? 'vertical' : 'horizontal'"
         :default-active="activeIndex"
         mode="horizontal"
         :ellipsis="false"
@@ -16,53 +16,59 @@
         <el-menu-item index="22">格式化</el-menu-item>
       </el-sub-menu>
       <el-menu-item index="3">资源</el-menu-item>
-      <el-menu-item v-if="mobileStore.isMobile" index="4">休闲游戏</el-menu-item>
+      <el-menu-item v-if="isMobile" index="4">休闲游戏</el-menu-item>
       <el-menu-item index="5">咸鱼之王</el-menu-item>
     </el-menu>
 </template>
 
 <script lang="ts" setup>
-import {ref, watchEffect} from 'vue'
-import {useRoute, useRouter} from 'vue-router'
-import useMobile from "@store/useMobile";
+import { ref, watchEffect } from "vue"
+import { useRoute, useRouter } from "vue-router"
+import useMobile from "@/store/useMobile";
+import { storeToRefs } from "pinia";
+
 const mobileStore = useMobile();
+const { isMobile, showDrawer } = storeToRefs(mobileStore);
 
-const route = useRoute()
-const router = useRouter()
+const route = useRoute();
+const router = useRouter();
 
-const activeIndex = ref('1')
+const activeIndex = ref("1");
 
 // 根据当前路由更新活动菜单项
 watchEffect(() => {
   const routeMap: Record<string, string> = {
-    '/': '1',
-    '/json': '21',
-    '/format': '22',
-    '/resources': '3',
-    '/games': '4',
-    '/xyzw': '4'
+    "/": "1",
+    "/json": "21",
+    "/format": "22",
+    "/resources": "3",
+    "/games": "4",
+    "/xyzw": "4"
   }
-  activeIndex.value = routeMap[route.path] || '1'
-})
+  activeIndex.value = routeMap[route.path] || "1";
+});
 
 // 处理菜单选择并跳转到对应路由
 const handleSelect = (key: string) => {
   const routesMap: Record<string, string> = {
-    '0': '/',
-    '1': '/',
-    '21': '/json',
-    '22': '/tools/encryption',
-    '23': '/tools/three',
-    '3': '/resources',
-    '4': '/games',
-    '5': '/xyzw',
+    "0": "/",
+    "1": "/",
+    "21": "/json",
+    "22": "/tools/encryption",
+    "23": "/tools/three",
+    "3": "/resources",
+    "4": "/games",
+    "5": "/xyzw",
   }
 
   if (routesMap[key]) {
     router.push(routesMap[key])
         .catch(err => {
-          console.error('路由跳转错误:', err)
-        })
+          console.error("路由跳转错误:", err)
+        });
+    if (isMobile) {
+      showDrawer.value = false;
+    }
   }
 }
 </script>

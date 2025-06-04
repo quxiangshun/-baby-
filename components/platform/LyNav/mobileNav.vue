@@ -1,11 +1,16 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import { Menu as IconMenu } from "@element-plus/icons-vue";
-const show = ref(false);
+import useMobile from "@/store/useMobile";
+import { storeToRefs } from "pinia";
+
+const mobileStore = useMobile();
+const { showDrawer } = storeToRefs(mobileStore);
 
 const showPopup = () => {
-  show.value = true;
+  showDrawer.value = true;
 };
+
 </script>
 <template>
   <div>
@@ -13,7 +18,7 @@ const showPopup = () => {
       <img src="/assets/image/logo.png" style="width: 70px; cursor: pointer" />
       <el-icon :size="25" @click="showPopup"><icon-menu /></el-icon>
     </div>
-    <el-drawer v-model="show" :with-header="false" size="60%">
+    <el-drawer v-model="showDrawer" :with-header="false" size="60%">
       <LyNavMenu />
     </el-drawer>
   </div>
