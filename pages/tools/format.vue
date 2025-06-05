@@ -10,7 +10,7 @@
         :lg="6"
         :xl="4"
     >
-      <el-card class="mb-5 cursor-pointer card-bg-custom p-2" style="padding: 0 !important" @click="navigateToTool(tool.url)">
+      <el-card class="mb-5 cursor-pointer" @click="navigateToTool(tool.url)">
         <div>{{ tool.name }}</div>
       </el-card>
     </el-col>
@@ -19,8 +19,8 @@
 </template>
   
   <script setup>
-  import { ref, computed } from 'vue';
-  import { useRouter } from 'vue-router'; // 引入路由钩子
+  import { ref, computed } from 'vue'
+  import { useRouter } from 'vue-router' // 引入路由钩子
   import { useHead } from "#app";
 
   const route = useRoute() // 获取当前路由对象
@@ -28,14 +28,14 @@
 
   // 计算属性：判断是否为主页（路径为 '/'）
   const isJsonRootPage = computed(() => {
-    return route.path === '/json'
+    return route.path === '/tools/format'
   })
 
   // 定义页面数据
   const toolList = ref([
-    { name: "JSON在线解析", icon: "", url: "/json/analyze" },
-    { name: "JSON压缩转义", icon: "", url: "" },
-    { name: "JSON编辑器", icon: "", url: "" }
+    { name: "JS压缩、格式化", icon: "", url: "/json/analyze" },
+    { name: "JS混淆加密", icon: "", url: "" },
+    { name: "CSS压缩、格式化", icon: "", url: "" }
   ])
 
   // 导航函数

@@ -7,10 +7,10 @@ const route = useRoute(); // 获取当前路由对象
 const router = useRouter();
 // 计算属性：判断是否为主页（路径为 '/'）
 const isGamesRootPage = computed(() => {
-  return route.path === '/games'
+  return route.path === '/games/casual-games'
 })
 const navigateToGame = (game) => {
-  router.push(`/games/iframe-${game.enName}`)
+  router.push(`/games/casual-games/iframe-${game.enName}`)
 }
 </script>
 

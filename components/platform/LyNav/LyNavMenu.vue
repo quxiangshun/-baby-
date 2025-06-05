@@ -16,8 +16,11 @@
         <el-menu-item index="22">格式化</el-menu-item>
       </el-sub-menu>
       <el-menu-item index="3">资源</el-menu-item>
-      <el-menu-item v-if="isMobile" index="4">休闲游戏</el-menu-item>
-      <el-menu-item index="5">咸鱼之王</el-menu-item>
+      <el-sub-menu index="4">
+        <template #title>游戏</template>
+        <el-menu-item v-if="isMobile" index="41">休闲游戏</el-menu-item>
+        <el-menu-item index="42">咸鱼之王</el-menu-item>
+      </el-sub-menu>
     </el-menu>
 </template>
 
@@ -39,11 +42,11 @@ const activeIndex = ref("1");
 watchEffect(() => {
   const routeMap: Record<string, string> = {
     "/": "1",
-    "/json": "21",
-    "/format": "22",
+    "/tools/json": "21",
+    "/tools/format": "22",
     "/resources": "3",
-    "/games": "4",
-    "/xyzw": "4"
+    "/games/casual-games": "41",
+    "/games/xyzw": "42"
   }
   activeIndex.value = routeMap[route.path] || "1";
 });
@@ -53,12 +56,11 @@ const handleSelect = (key: string) => {
   const routesMap: Record<string, string> = {
     "0": "/",
     "1": "/",
-    "21": "/json",
-    "22": "/tools/encryption",
-    "23": "/tools/three",
+    "21": "/tools/json",
+    "22": "/tools/format",
     "3": "/resources",
-    "4": "/games",
-    "5": "/xyzw",
+    "41": "/games/casual-games",
+    "42": "/games/xyzw",
   }
 
   if (routesMap[key]) {

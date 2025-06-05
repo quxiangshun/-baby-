@@ -27,13 +27,13 @@ const router = useRouter() // 获取路由实例
 
 // 计算属性：判断是否为主页（路径为 '/'）
 const isXyzwRootPage = computed(() => {
-  return route.path === '/xyzw'
+  return route.path === '/games/xyzw'
 })
 
 // 定义页面数据
 const toolList = ref([
-  { name: "宝箱计算", icon: "", url: "/xyzw/treasure-box" },
-  { name: "金鱼计算", icon: "", url: "/xyzw/golden-fish" },
+  { name: "宝箱计算", icon: "", url: "/games/xyzw/treasure-box" },
+  { name: "金鱼计算", icon: "", url: "/games/xyzw/golden-fish" },
 ])
 
 // 导航函数
