@@ -15,15 +15,13 @@ const isResourceRootPage = computed(() => {
 
 <template>
   <div v-if="isResourceRootPage" class="select-none">
-    <el-card class="card-bg-custom glass-scrollbar" style="height: calc(100vh - 60px);">
-      <HeaderDescription />
-      <h2 class="area-title mt-5 mb-5">Windows Adobe系列</h2>
-      <ResourceList :data="winAdobe23ResourceList" />
-      <h2 class="area-title mt-5 mb-5">Mac Adobe系列</h2>
-      <ResourceList :data="winAdobe23ResourceList" />
-      <h2 class="area-title mt-5 mb-5">Windows 产品</h2>
-      <ResourceList :data="pmResourceList" />
-    </el-card>
+    <HeaderDescription />
+    <h2 class="area-title mt-5 mb-5">Windows Adobe系列</h2>
+    <ResourceList :data="winAdobe23ResourceList" />
+    <h2 class="area-title mt-5 mb-5">Mac Adobe系列</h2>
+    <ResourceList :data="winAdobe23ResourceList" />
+    <h2 class="area-title mt-5 mb-5">Windows 产品</h2>
+    <ResourceList :data="pmResourceList" />
   </div>
   <NuxtPage/>
 </template>

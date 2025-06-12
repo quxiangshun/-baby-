@@ -1,6 +1,8 @@
 <template>
   <div class="ly-container">
-    <slot />
+    <el-card class="card-bg-custom glass-scrollbar" style="height: calc(100vh - 60px);">
+      <slot />
+    </el-card>
   </div>
 </template>
 

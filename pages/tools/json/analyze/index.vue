@@ -1,4 +1,14 @@
 <script setup>
+import { onMounted } from 'vue';
+import useMobile from "@/store/useMobile";
+import { storeToRefs } from "pinia";
+
+const mobileStore = useMobile();
+const { activeIndex } = storeToRefs(mobileStore);
+
+onMounted(() => {
+  activeIndex.value = "21"
+});
 import JsonEditorVue from 'json-editor-vue'
 
 const attrs = useAttrs()

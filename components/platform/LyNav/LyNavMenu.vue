@@ -25,18 +25,16 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watchEffect } from "vue"
+import { watchEffect } from "vue"
 import { useRoute, useRouter } from "vue-router"
 import useMobile from "@/store/useMobile";
 import { storeToRefs } from "pinia";
 
 const mobileStore = useMobile();
-const { isMobile, showDrawer } = storeToRefs(mobileStore);
+const { isMobile, showDrawer, activeIndex } = storeToRefs(mobileStore);
 
 const route = useRoute();
 const router = useRouter();
-
-const activeIndex = ref("1");
 
 // 根据当前路由更新活动菜单项
 watchEffect(() => {

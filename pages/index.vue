@@ -1,7 +1,5 @@
 <template>
-  <el-card class="card-bg-custom glass-scrollbar" style="height: calc(100vh - 60px);">
-    <MusicalText />
-  </el-card>
+  <MusicalText />
 </template>
 
 <script lang="ts" setup>

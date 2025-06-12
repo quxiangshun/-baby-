@@ -18,14 +18,13 @@
   <NuxtPage/>
 </template>
   
-  <script setup>
+<script setup>
   import { ref, computed } from 'vue';
   import { useRouter } from 'vue-router'; // 引入路由钩子
   import { useHead } from "#app";
 
   const route = useRoute() // 获取当前路由对象
   const router = useRouter() // 获取路由实例
-
   // 计算属性：判断是否为主页（路径为 '/'）
   const isJsonRootPage = computed(() => {
     return route.path === '/tools/json'
