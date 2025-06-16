@@ -10,6 +10,11 @@
         <img src="/assets/image/logo.png" style="width: 70px" alt="Logo" />
       </el-menu-item>
       <el-menu-item index="1">首页</el-menu-item>
+      <el-sub-menu index="5">
+        <template #title>屈氏文化</template>
+        <el-menu-item index="51">屈氏概览</el-menu-item>
+        <el-menu-item index="52">屈氏来源</el-menu-item>
+      </el-sub-menu>
       <el-sub-menu index="2">
         <template #title>工具</template>
         <el-menu-item index="21">JSON</el-menu-item>
@@ -44,7 +49,9 @@ watchEffect(() => {
     "/tools/format": "22",
     "/resources": "3",
     "/games/casual-games": "41",
-    "/games/xyzw": "42"
+    "/games/xyzw": "42",
+    "/qu/overview": "51",
+    "/qu/origin": "52",
   }
   activeIndex.value = routeMap[route.path] || "1";
 });
@@ -59,6 +66,8 @@ const handleSelect = (key: string) => {
     "3": "/resources",
     "41": "/games/casual-games",
     "42": "/games/xyzw",
+    "51": "/qu/overview",
+    "52": "/qu/origin",
   }
 
   if (routesMap[key]) {

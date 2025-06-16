@@ -158,7 +158,8 @@
     bottom: 0;
     width: 100%;
     overflow: hidden;
-    background-image: url("./snow-bg.jpg");
+    //background-image: url("./snow-bg.jpg");
+    background-color: #ECECEC;
     background-size: cover;
     background-position: center;
   }

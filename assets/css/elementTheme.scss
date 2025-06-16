@@ -1,21 +1,21 @@
 :root {
-  --el-color-primary: #ff69b4 !important;
-  --el-color-primary-light-3: #ff87c1 !important;
-  --el-color-primary-light-5: #ffa5d0 !important;
-  --el-color-primary-light-7: #ffc3de !important;
-  --el-color-primary-light-8: #ffd1e5 !important;
-  --el-color-primary-light-9: #ffe9f2 !important;
-  --el-color-primary-dark-2: #ff47a3 !important;
+  --el-color-primary: #8B4513 !important;      /* 赭石色 - 主色调，代表历史建筑的砖石 */
+  --el-color-primary-light-3: #A0522D !important;  /* 赤褐色 - 稍浅的砖石色 */
+  --el-color-primary-light-5: #BC8F8F !important;  /* 玫瑰褐色 - 更浅的砖石色 */
+  --el-color-primary-light-7: #D2B48C !important;  /* 黄褐色 - 非常浅的砖石色 */
+  --el-color-primary-light-8: #E9967A !important;  /* 暗珊瑚色 - 接近肤色的砖石色 */
+  --el-color-primary-light-9: #F5DEB3 !important;  /* 小麦色 - 极浅的砖石色 */
+  --el-color-primary-dark-2: #6B3610 !important;  /* 深赭石色 - 更深的砖石色 */
 
-  /* 动漫风格蓝色系文本颜色 */
-  --el-text-color-primary: #9932cc !important;    /* 群青色 - 主文本 */
-  --el-text-color-regular: #2589bd !important;    /* 瑠璃色 - 常规文本 */
-  --el-text-color-secondary: #73a6ff !important;  /* 露草色 - 次要文本 */
+  /* 历史文本颜色 */
+  --el-text-color-primary: #8B0000 !important;    /* 暗红色 - 主文本，象征古老文献的朱砂 */
+  --el-text-color-regular: #5D4037 !important;    /* 棕色 - 常规文本，象征树皮或木材 */
+  --el-text-color-secondary: #795548 !important;  /* 棕褐色 - 次要文本，象征风化的木材 */
 
-  /* 动漫风格紫色系文本颜色 */
-  --el-text-color-accent: #1a5fb4 !important;     /* 深紫色 - 强调文本 */
-  --el-text-color-link: #7b68ee !important;       /* 紫罗兰色 - 链接文本 */
+  /* 历史强调色 */
+  --el-text-color-accent: #4A148C !important;     /* 深紫色 - 强调文本，象征古代皇室使用的紫色染料 */
+  --el-text-color-link: #0D47A1 !important;       /* 深蓝色 - 链接文本，象征青铜器的铜绿 */
 
   /* 白色文本用于深色背景 */
-  --el-text-color-white: #ffffff !important;      /* 纯白色 - 用于深色背景 */
+  --el-text-color-white: #F5F5DC !important;      /* 米色 - 用于深色背景，类似羊皮纸的颜色 */
 }
