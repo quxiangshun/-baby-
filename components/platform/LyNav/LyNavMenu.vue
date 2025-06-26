@@ -13,10 +13,12 @@
       <el-sub-menu index="5">
         <template #title>屈氏文化</template>
         <el-menu-item index="51">屈氏概览</el-menu-item>
-        <el-menu-item index="52">屈氏来源</el-menu-item>
+        <el-menu-item index="52">屈氏起源</el-menu-item>
+        <el-menu-item index="53">郡望堂号</el-menu-item>
       </el-sub-menu>
       <el-sub-menu index="2">
         <template #title>工具</template>
+        <el-menu-item index="23">数学</el-menu-item>
         <el-menu-item index="21">JSON</el-menu-item>
         <el-menu-item index="22">格式化</el-menu-item>
       </el-sub-menu>
@@ -47,11 +49,13 @@ watchEffect(() => {
     "/": "1",
     "/tools/json": "21",
     "/tools/format": "22",
+    "/tools/math": "23",
     "/resources": "3",
     "/games/casual-games": "41",
     "/games/xyzw": "42",
     "/qu/overview": "51",
     "/qu/origin": "52",
+    "/qu/country-hall": "53",
   }
   activeIndex.value = routeMap[route.path] || "1";
 });
@@ -63,11 +67,13 @@ const handleSelect = (key: string) => {
     "1": "/",
     "21": "/tools/json",
     "22": "/tools/format",
+    "23": "/tools/math",
     "3": "/resources",
     "41": "/games/casual-games",
     "42": "/games/xyzw",
     "51": "/qu/overview",
     "52": "/qu/origin",
+    "53": "/qu/country-hall",
   }
 
   if (routesMap[key]) {
