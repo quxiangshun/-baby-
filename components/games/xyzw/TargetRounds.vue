@@ -125,10 +125,10 @@
   </el-card>
 </template>
 <script setup lang="ts">
-import woodenBoxIcon from "~/assets/image/xyzw/wooden-box.png";
-import bronzeBoxIcon from "~/assets/image/xyzw/bronze-box.png";
-import goldBoxIcon from "~/assets/image/xyzw/gold-box.png";
-import platinumBoxIcon from "~/assets/image/xyzw/platinum-box.png";
+import woodenBoxIcon from "assets/image/xyzw/wooden-box.png";
+import bronzeBoxIcon from "assets/image/xyzw/bronze-box.png";
+import goldBoxIcon from "assets/image/xyzw/gold-box.png";
+import platinumBoxIcon from "assets/image/xyzw/platinum-box.png";
 import { Refresh, GoldMedal } from '@element-plus/icons-vue';
 import {computed, ref} from "vue";
 const targetRounds = ref(4);

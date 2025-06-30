@@ -6,6 +6,7 @@
         <MobileContainer v-else>
             <slot/>
         </MobileContainer>
+        <el-backtop :right="100" :bottom="100" />
     </ClientOnly>
 </template>
 

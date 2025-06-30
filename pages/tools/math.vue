@@ -32,8 +32,9 @@
 
   // 定义页面数据
   const toolList = ref([
-    { name: "加减法", icon: "", url: "/tools/math/plus-minus" },
-    { name: "JS混淆加密", icon: "", url: "" },
+    { name: "时钟训练", icon: "", url: "/tools/math/clock" },
+    { name: "加减法（小学）", icon: "", url: "/tools/math/plus-minus" },
+    { name: "找规律", icon: "", url: "/tools/math/plus-minus" },
     { name: "CSS压缩、格式化", icon: "", url: "" }
   ])
 

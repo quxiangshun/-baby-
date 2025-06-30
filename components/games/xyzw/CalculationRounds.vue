@@ -222,10 +222,10 @@
 
 <script setup lang="ts">
 import {computed, onMounted, ref, watch} from 'vue';
-import woodenBoxIcon from "~/assets/image/xyzw/wooden-box.png";
-import bronzeBoxIcon from "~/assets/image/xyzw/bronze-box.png";
-import goldBoxIcon from "~/assets/image/xyzw/gold-box.png";
-import platinumBoxIcon from "~/assets/image/xyzw/platinum-box.png";
+import woodenBoxIcon from "assets/image/xyzw/wooden-box.png";
+import bronzeBoxIcon from "assets/image/xyzw/bronze-box.png";
+import goldBoxIcon from "assets/image/xyzw/gold-box.png";
+import platinumBoxIcon from "assets/image/xyzw/platinum-box.png";
 // 状态管理
 const woodenBox = ref(0);
 const bronzeBox = ref(0);
