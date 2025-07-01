@@ -19,6 +19,8 @@
       <el-sub-menu index="2">
         <template #title>工具</template>
         <el-menu-item index="23">数学</el-menu-item>
+        <el-menu-item index="24">语文</el-menu-item>
+        <el-menu-item index="25">英语</el-menu-item>
         <el-menu-item index="21">JSON</el-menu-item>
         <el-menu-item index="22">格式化</el-menu-item>
       </el-sub-menu>
@@ -50,6 +52,8 @@ watchEffect(() => {
     "/tools/json": "21",
     "/tools/format": "22",
     "/tools/math": "23",
+    "/tools/chinese": "24",
+    "/tools/english": "25",
     "/resources": "3",
     "/games/casual-games": "41",
     "/games/xyzw": "42",
@@ -68,6 +72,8 @@ const handleSelect = (key: string) => {
     "21": "/tools/json",
     "22": "/tools/format",
     "23": "/tools/math",
+    "24": "/tools/chinese",
+    "25": "/tools/english",
     "3": "/resources",
     "41": "/games/casual-games",
     "42": "/games/xyzw",
